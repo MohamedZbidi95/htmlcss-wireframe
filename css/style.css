@@ -1,12 +1,27 @@
+/* =========================================================
+   htmlcss-wireframe – stile delle card
+   ========================================================= */
+
+/* RESET: va sempre IN CIMA al file.
+   * = universal selector, qui è l'uso giusto.
+   box-sizing: border-box → width e height comprendono padding e bordo
+   margin/padding: 0 → toglie gli spazi automatici del browser (es. 8px del body) */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body {    
+
+/* BODY: sfondo grigio chiaro e font di tutta la pagina.
+   font-family va nel body, così tutti gli elementi lo EREDITANO.
+   Font stack: arial, se manca → sans-serif (fallback). */
+body {
     background-color: #f2f2f2;
-    font-family: arial, sans-serif; 
+    font-family: arial, sans-serif;
 }
+
+/* HEADER: barra blu scuro, testo bianco e centrato.
+   text-align sull'header centra SOLO l'header (sul body centrerebbe tutto). */
 header {
     background-color: #2c3e50;
     color: white;
@@ -14,6 +29,13 @@ header {
     font-size: 25px;
     text-align: center;
 }
+
+/* CARD: il BOX MODEL
+   padding = spazio DENTRO (colorato dallo sfondo bianco)
+   margin  = spazio FUORI (trasparente, tra una card e l'altra)
+   border  = la cornice: spessore + tipo + colore
+   min-height = altezza MINIMA: se il testo è lungo la card CRESCE
+   (con height o max-height il testo uscirebbe: overflow) */
 .card {
     background-color: white;
     min-height: 150px;
@@ -22,19 +44,31 @@ header {
     border-radius: 10px;
     border: 1px solid #ddd;
 }
+
+/* AVATAR: class selector, colpisce SOLO le foto con class="avatar"
+   (con "img" colpirebbe tutte le immagini della pagina).
+   max-width = larghezza MASSIMA; height: auto = l'immagine non si deforma. */
 .avatar {
     max-width: 80px;
     height: auto;
     border-radius: 5px;
     border: 1px solid #333;
 }
+
+/* NOME (span): grassetto e più grande.
+   ⚠️ "span" colpisce TUTTI gli span della pagina:
+   più preciso sarebbe ".card span" (descendant combinator). */
 span {
     font-weight: bold;
     font-size: 20px;
 }
+
+/* TESTO delle card */
 p {
     font-size: 15px;
 }
+
+/* FOOTER: stesso blu dell'header, testo bianco e centrato */
 footer {
     background-color: #2c3e50;
     color: white;

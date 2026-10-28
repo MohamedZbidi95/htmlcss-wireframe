@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="it">
+
+<!-- =========================================================
+     htmlcss-wireframe – index.html
+     Esercizio del prof del 22/09: riprodurre il wireframe delle card
+     Fase I: struttura + spaziature (box model) · Fase II: stile
+     ========================================================= -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title = nome nella SCHEDA del browser (diverso dall'h1 nella pagina) -->
     <title>La mia prima app</title>
+    <!-- External CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-<header>
-    <h1>LA MIA PRIMA APP</h1>
-</header>
+    <!-- HEADER: il titolo principale della pagina (un solo h1) -->
+    <header>
+        <h1>LA MIA PRIMA APP</h1>
+    </header>
 
-<main>
-    <section>
-        <div class="card">
-            <img class="avatar" src="./PNG/utente.png" alt="Avatar">
-            <span>Pinco Pallo</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error. Quibusdam, eius!</p>
-        </div>
-        <div class="card">
-            <img class="avatar" src="./PNG/utente_2.png" alt="Avatar">
-            <span>Pinco Pallo</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error. Quibusdam, eius!</p>
-        </div>
-        <div class="card">
-            <img class="avatar" src="./PNG/utente_3.png" alt="Avatar">
-            <span>Pinco Pallo</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error. Quibusdam, eius!</p>
-        </div>
-        <div class="card">
-            <img class="avatar" src="./PNG/utente_4.png" alt="Avatar">
-            <span>Pinco Pallo</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error. Quibusdam, eius!</p>
-        </div>
-    </section>
-</main>
+    <!-- MAIN: il contenuto, una section che contiene le 4 card -->
+    <main>
+        <section>
+            <!-- CARD: div con class="card" = la scatola (box model nel CSS)
+                 img con class="avatar" = solo la foto (class DIVERSA dalla card)
+                 span = INLINE: il nome sta ACCANTO alla foto
+                 p    = BLOCK: il testo va SOTTO -->
+            <div class="card">
+                <img class="avatar" src="./PNG/utente.png" alt="Avatar">
+                <span>Pinco Pallo</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad
+                    dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error.
+                    Quibusdam, eius!</p>
+            </div>
+            <div class="card">
+                <img class="avatar" src="./PNG/utente_2.png" alt="Avatar">
+                <span>Pinco Pallo</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad
+                    dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error.
+                    Quibusdam, eius!</p>
+            </div>
+            <div class="card">
+                <img class="avatar" src="./PNG/utente_3.png" alt="Avatar">
+                <span>Pinco Pallo</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad
+                    dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error.
+                    Quibusdam, eius!</p>
+            </div>
+            <div class="card">
+                <img class="avatar" src="./PNG/utente_4.png" alt="Avatar">
+                <span>Pinco Pallo</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta animi ab dignissimos perspiciatis ad
+                    dolores deleniti aspernatur vero ipsum cum quae sequi eum optio, consequuntur iste enim error.
+                    Quibusdam, eius!</p>
+            </div>
+        </section>
+    </main>
 
-
-
-<footer>
-    <p>Made with ♥ by ...</p>
-</footer>
+    <!-- FOOTER: in fondo alla pagina.
+         Nota del prof: con poche card il footer può restare in alto;
+         è normale, si risolve con Flexbox (L09). -->
+    <footer>
+        <p>Made with ♥ by ...</p>
+    </footer>
 </body>
+
 </html>
